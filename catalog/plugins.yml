@@ -1,0 +1,223 @@
+# Human-maintained catalog. The pack lists decide what actually gets built.
+
+source_common:
+  - id: sm-reloadmap
+    name: SM-Re.LoadMap
+    source: https://github.com/JoinedSenses/SM-Re.LoadMap
+    status: pending-github
+    planned_pack: source-common
+
+  - id: tickrate
+    name: Tickrate
+    source: https://forums.alliedmods.net/showthread.php?t=73925
+    status: vendored-manual
+    planned_pack: source-common
+    artifact: tickrate.smx
+    sha256: accd52453ce8424b519fa4e909f0b239c70c0186dde68023a1f0e1ca796f46f1
+
+  - id: spray-exploit-fixer
+    name: Spray Exploit Fixer
+    source: https://github.com/SilvDev/Spray_Exploit
+    status: vendored-manual-now-compile-in-actions-later
+    planned_pack: source-common
+    artifact: spray_exploit_fixer.smx
+    sha256: 1d1a6b0e36bfef7984a33dbfddaaf23c207511c1863cf4d3550271dcf2ad51da
+    action_plan: Fetch raw source from GitHub and compile in Actions.
+
+  - id: command-buffer
+    name: Command Buffer
+    source: https://github.com/SilvDev/Command_Buffer
+    status: vendored-manual-now-compile-in-actions-later
+    planned_pack: source-common
+    artifacts:
+      - path: command_buffer.smx
+        sha256: 3be1eaea5950b7e7d967787976e55e7b7729278aa4bed3ddc5cc7c9df7a39f1c
+      - path: command_buffer.games.txt
+        sha256: adeb663f7e7700a34a9137973b1c062958c0c4bffdb53ca43bf9b6218593efb8
+    action_plan: Fetch raw source and gamedata from GitHub, then compile in Actions.
+
+  - id: sm-dev-cmds
+    name: Dev Cmds
+    source: https://github.com/SilvDev/Various_Scripts_Collection/blob/main/sm_dev_cmds.sp
+    forum: https://forums.alliedmods.net/showthread.php?t=187566
+    status: vendored-binary-now-compile-from-github-later
+    planned_pack: source-common
+    artifact: sm_dev_cmds.smx
+    sha256: 3e0f8b15f66a08423d2d542ef6b462e70044dbd653b06d35b1fd176317c6a4d2
+    source_artifact: sm_dev_cmds.sp
+    source_sha256: ce903d4e72f09a79bcc301e4decaf4b325f00019870e69a98913f0b7bdfb1dc5
+    source_ref: fd405f873dc9b839f1f3125ee8142328294bb192
+    source_version: "1.54"
+    fallback_binary_url: https://www.sourcemod.net/vbcompiler.php?file_id=180343
+    notes: GitHub source is newer than the currently vendored binary. Compile from GitHub source in Actions before replacing the runtime .smx.
+
+  - id: noautokick
+    name: No Auto Kick
+    source: https://github.com/sapphonie/gameservers/blob/stable/tf/addons/sourcemod/scripting/noautokick.sp
+    status: pending-source-compile
+    planned_pack: source-common
+
+  - id: lilac
+    name: LILAC
+    source: https://github.com/srcdslab/sm-plugin-lilac
+    status: pending-github
+    planned_pack: source-anticheat-lilac
+    notes: Optional pack because TF2 will use a different anti-cheat.
+
+  - id: funcommandsx
+    name: Fun Commands X
+    source: https://github.com/JoinedSenses/SM-FunCommandsX
+    status: pending-github
+    planned_pack: source-common
+
+  - id: firebulletsfix
+    name: Fire Bullets Fix
+    source: https://github.com/XutaxKamay/firebulletsfix
+    status: pending-github
+    planned_pack: source-common
+
+  - id: console-welcome
+    name: Console Welcome
+    source: https://forums.alliedmods.net/showpost.php?p=2797030&postcount=47
+    status: vendored-manual
+    planned_pack: source-common
+    artifact: console-welcome.smx
+    sha256: 737cf15f2fe656fe96736294a8ca1f5a9232c6d1ec6e39c57a26247c77434e6e
+
+  - id: chatexec
+    name: ChatExec
+    source: https://github.com/SNWCreations/ChatExec
+    status: pending-github
+    planned_pack: source-common
+
+  - id: autoreload
+    name: AutoReload
+    source: https://forums.alliedmods.net/showthread.php?t=322045
+    status: vendored-manual
+    planned_pack: source-common
+    artifact: AutoReload.zip
+    sha256: 341493cd860f3df4ad8748cc392b5105b0506f9ecde0ebf7f1e93903e5a4a292
+    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+
+  - id: sourcebans-pp
+    name: SourceBans++
+    source: https://github.com/sbpp/sourcebans-pp/
+    status: pending-github-release
+    planned_pack: source-admin-sourcebans
+    notes: Keep optional because it needs database/web configuration.
+
+l4d_play:
+  - id: vocalize-admin-commands
+    name: Vocalize Admin Commands
+    source: https://forums.alliedmods.net/showthread.php?p=2147419
+    status: vendored-manual
+    planned_pack: l4d-play
+    artifact: vocalizeadmincommands.zip
+    sha256: 3e1fd54eee3d366e761572272664eecf2e987022073b5e5053b7171911579c82
+    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+
+  - id: sceneprocessor
+    name: Scene Processor
+    source: https://forums.alliedmods.net/showpost.php?p=2766130&postcount=59
+    status: vendored-manual
+    planned_pack: l4d-play
+    artifact: sceneprocessor.zip
+    sha256: b2e93d1849095969b4eeb927e9a78ce81b7fb0f41c6bada3b154547b59364c6b
+    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+
+  - id: l4d2pause
+    name: l4d2pause
+    source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d2pause
+    status: pending-github
+    planned_pack: l4d-play
+
+  - id: l4d2-vote-manager3
+    name: l4d2_vote_manager3
+    source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d2_vote_manager3
+    status: pending-github
+    planned_pack: l4d-play
+
+  - id: builtinvotes
+    name: BuiltinVotes
+    source: https://github.com/L4D-Community/builtinvotes
+    status: fetchable-github-actions-artifact
+    planned_pack: l4d-play
+    artifact: builtinvotes-sm1.12-linux-93e0b8c.zip
+    sha256: f21bc27bc325153682154ce25ddf553a7c2f79c641885dd876db4cbd178f3ed0
+    artifact_name: builtinvotes-sm1.12-linux-93e0b8c
+    artifact_api_url: https://api.github.com/repos/L4D-Community/builtinvotes/actions/artifacts/6214148569/zip
+    notes: Requires GITHUB_TOKEN. Upstream GitHub Actions artifacts can expire.
+
+  - id: l4d2-levelchanging
+    name: L4D2 Level Changing
+    source: https://forums.alliedmods.net/showthread.php?t=319156
+    status: vendored-manual
+    planned_pack: l4d-play
+    artifact: l4d2_levelchanging.zip
+    sha256: 25809112dc5e9823bb727aae6ec36b33a31cd6d0f7d274131d3e4260c6061816
+    notes: Forum zip attachment; plain curl to AlliedMods returned 403. Extract with bsdtar, not old unzip.
+
+  - id: respawn
+    name: Respawn
+    source: https://forums.alliedmods.net/showthread.php?p=2693455
+    status: vendored-manual
+    planned_pack: l4d-play
+    artifact: Respawn.zip
+    sha256: 494d3a1c2e48e41db8a723070c3298766c8a044d1364fd5761b22987ba6d2aa2
+    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+
+  - id: savechat
+    name: savechat
+    source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/savechat
+    status: pending-github
+    planned_pack: l4d-play
+
+  - id: admin-hp
+    name: admin_hp
+    source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/admin_hp
+    status: pending-github
+    planned_pack: l4d-play
+
+  - id: l4d-console-spam
+    name: l4d_console_spam
+    source: https://github.com/SirPlease/L4D2-Competitive-Rework
+    status: pending-github
+    planned_pack: l4d-play
+
+  - id: sp-public-selected
+    name: sp_public selected plugins
+    source: https://github.com/shqke/sp_public/
+    status: fetchable-github-actions-artifact
+    planned_pack: l4d-play
+    artifact: sp_public-sm1.12-0b7f52e.zip
+    sha256: 99774cbb60947a2001aec34dcf419105f57379d9ca1dab17122de350a298e63e
+    artifact_name: sp_public-sm1.12-0b7f52e
+    artifact_api_url: https://api.github.com/repos/shqke/sp_public/actions/artifacts/6214170056/zip
+    notes: Requires GITHUB_TOKEN. Upstream GitHub Actions artifacts can expire.
+    included_plugins:
+      - autorecorder
+      - hide_sourcetv
+      - placeholders
+
+  - id: ragdoll-options
+    name: ragdoll_options
+    source: https://github.com/neburaii/l4d2-plugins/blob/08f0772871f12f20136bfd063f6de37be17c3b73/ragdoll_options/plugins/ragdoll_options.smx
+    status: copied-from-l4d-server
+    planned_pack: l4d-play
+    artifact: ragdoll_options.smx
+    sha256: b466ce53d4ba9917578a23c729143c2b6833c7ae2ec8e6578205b5c8dcaebfd3
+
+l4d_common:
+  - id: sourcetvsupport
+    name: SourceTVSupport
+    source: https://github.com/shqke/sourcetvsupport
+    status: copied-from-l4d-server
+    planned_pack: l4d-common
+    notes: L4D files from CI artifact sourcetvsupport-sm1.12-linux-f6b49a9, commit f6b49a9ed86399f641eaf8162fb0c6f85d5ebd2b.
+
+  - id: tickrate-enabler
+    name: Tickrate Enabler
+    source: https://github.com/accelerator74/Tickrate-Enabler
+    status: copied-from-l4d-server
+    planned_pack: l4d-common
+    notes: L4D Linux files from CI artifact Tickrate-Enabler-l4d-linux-c86eda6, commit c86eda644182bc23c3e39a24398d15a0cc208738.

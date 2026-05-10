@@ -1,0 +1,6 @@
+# Optional SourceMod anti-cheat pack.
+# Keep this separate so TF2 images can choose a different anti-cheat without
+# installing this one and deleting it afterwards.
+#
+# plugins/source-anticheat/lilac
+

@@ -1,0 +1,4 @@
+# L4D-family runtime additions shared by L4D images.
+plugins/l4d-common/sourcetvsupport
+plugins/l4d-common/tickrate-enabler
+

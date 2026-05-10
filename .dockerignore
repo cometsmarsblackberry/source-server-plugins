@@ -1,0 +1,6 @@
+.git/
+dist/
+tmp/
+*.tar
+*.tar.gz
+
