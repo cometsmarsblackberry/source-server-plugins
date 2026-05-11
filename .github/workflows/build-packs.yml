@@ -30,6 +30,12 @@ jobs:
       - name: Build source-common overlay
         run: scripts/build-pack.sh source-common
 
+      - name: Build source-anticheat-lilac overlay
+        run: scripts/build-pack.sh source-anticheat-lilac
+
+      - name: Build source-admin-sourcebans overlay
+        run: scripts/build-pack.sh source-admin-sourcebans
+
       - name: Build l4d-common overlay
         run: scripts/build-pack.sh l4d-common
 

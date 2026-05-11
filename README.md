@@ -7,7 +7,10 @@ server image repo. Game repos can consume one or more built overlays:
 
 ```text
 source-common      generic SourceMod plugins for most Source games
-source-anticheat   optional anti-cheat packs, not forced into every game
+source-anticheat-lilac
+                   optional LILAC anti-cheat pack
+source-admin-sourcebans
+                   optional SourceBans++ admin/database pack
 l4d-common         L4D-family extensions/plugins shared by L4D images
 l4d2               L4D2-only additions that are unsafe for L4D1
 l4d-play           L4D-family gameplay/admin plugins for the play image
@@ -34,6 +37,8 @@ scripts/build-pack.sh
 ```sh
 scripts/validate.sh
 scripts/build-pack.sh source-common
+scripts/build-pack.sh source-anticheat-lilac
+scripts/build-pack.sh source-admin-sourcebans
 scripts/build-pack.sh l4d-common
 scripts/build-pack.sh l4d2
 scripts/build-pack.sh l4d-play

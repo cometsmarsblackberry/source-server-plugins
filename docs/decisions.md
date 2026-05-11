@@ -48,3 +48,11 @@ consume `l4d-common` and `l4d-play` without carrying incompatible files.
 SourceBans++ is broadly SourceMod-compatible, but it is a service integration
 that expects database/web configuration. Treat it as an optional admin pack,
 not as part of the lowest-level `source-common` pack.
+
+## Optional Packs In L4D Images
+
+The pack repo keeps LILAC and SourceBans++ optional. Individual game image repos
+decide whether to opt into them. The L4D image repo currently installs:
+
+- `source-anticheat-lilac` in `l4d-sourcemod`
+- `source-admin-sourcebans` in `l4d-play`

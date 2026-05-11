@@ -41,5 +41,5 @@ These are AlliedMods forum zip/attachment downloads or otherwise awkward to fetc
 
 | Plugin | Fetch method | Notes |
 | --- | --- | --- |
-| LILAC | GitHub release tarball | Latest release asset exists with SHA-256 published by GitHub. Keep in optional anti-cheat pack. |
-| SourceBans++ plugins | GitHub release tarball | `Plugins-Latest` release asset exists with SHA-256 published by GitHub. Keep as optional admin integration pack. |
+| LILAC | GitHub release tarball | Imported into `source-anticheat-lilac` from `sm-plugin-lilac-latest.tar.gz`, SHA-256 `b33503bb668f4104533932951c596474ca2b747d794e5896b10f3870d58eee7c`. |
+| SourceBans++ plugins | GitHub release tarball | Imported into `source-admin-sourcebans` from `sourcebans-pp-Plugins-Latest.tar.gz`, SHA-256 `18fbd458af0b610f93553a8eaec1c89d1cc6bca8b2a94cbd4ecc73f4c88aabce`. |

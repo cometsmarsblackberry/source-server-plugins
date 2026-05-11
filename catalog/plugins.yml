@@ -60,8 +60,11 @@ source_common:
   - id: lilac
     name: LILAC
     source: https://github.com/srcdslab/sm-plugin-lilac
-    status: pending-github
+    status: vendored-github-release
     planned_pack: source-anticheat-lilac
+    artifact: sm-plugin-lilac-latest.tar.gz
+    download_url: https://github.com/srcdslab/sm-plugin-lilac/releases/download/latest/sm-plugin-lilac-latest.tar.gz
+    sha256: b33503bb668f4104533932951c596474ca2b747d794e5896b10f3870d58eee7c
     notes: Optional pack because TF2 will use a different anti-cheat.
 
   - id: funcommandsx
@@ -112,8 +115,11 @@ source_common:
   - id: sourcebans-pp
     name: SourceBans++
     source: https://github.com/sbpp/sourcebans-pp/
-    status: pending-github-release
+    status: vendored-github-release
     planned_pack: source-admin-sourcebans
+    artifact: sourcebans-pp-Plugins-Latest.tar.gz
+    download_url: https://github.com/sbpp/sourcebans-pp/releases/download/Plugins-Latest/sourcebans-pp-Plugins-Latest.tar.gz
+    sha256: 18fbd458af0b610f93553a8eaec1c89d1cc6bca8b2a94cbd4ecc73f4c88aabce
     notes: Keep optional because it needs database/web configuration.
 
 l4d_play:
