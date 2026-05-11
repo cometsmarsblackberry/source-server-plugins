@@ -22,6 +22,7 @@ for file in \
   l4d2_levelchanging.zip \
   sceneprocessor.zip \
   sm_dev_cmds.smx \
+  sourcetvmanager.zip \
   sp_public-sm1.12-0b7f52e.zip \
   spray_exploit_fixer.smx \
   tickrate.smx \
@@ -38,12 +39,13 @@ mkdir -p \
   "${repo_root}/plugins/source-common/sm-dev-cmds/overlay/addons/sourcemod/plugins" \
   "${repo_root}/plugins/source-common/console-welcome/overlay/addons/sourcemod/plugins" \
   "${repo_root}/plugins/source-common/autoreload/overlay/addons/sourcemod" \
+  "${repo_root}/plugins/source-common/sourcetvmanager/overlay" \
   "${repo_root}/plugins/l4d-play/vocalize-admin-commands/overlay" \
   "${repo_root}/plugins/l4d-play/sceneprocessor/overlay" \
   "${repo_root}/plugins/l4d-play/builtinvotes/overlay" \
-  "${repo_root}/plugins/l4d-play/l4d2-levelchanging/overlay" \
   "${repo_root}/plugins/l4d-play/respawn/overlay" \
-  "${repo_root}/plugins/l4d-play/sp-public-selected/overlay"
+  "${repo_root}/plugins/l4d-play/sp-public-selected/overlay" \
+  "${repo_root}/plugins/l4d2/l4d2-levelchanging/overlay"
 
 cp -a "${src}/tickrate.smx" "${repo_root}/plugins/source-common/tickrate/overlay/addons/sourcemod/plugins/tickrate.smx"
 cp -a "${src}/spray_exploit_fixer.smx" "${repo_root}/plugins/source-common/spray-exploit-fixer/overlay/addons/sourcemod/plugins/spray_exploit_fixer.smx"
@@ -59,6 +61,9 @@ unzip -q "${src}/AutoReload.zip" -d "${work}/autoreload"
 cp -a "${work}/autoreload/plugins" "${repo_root}/plugins/source-common/autoreload/overlay/addons/sourcemod/"
 cp -a "${work}/autoreload/scripting" "${repo_root}/plugins/source-common/autoreload/overlay/addons/sourcemod/"
 
+unzip -q "${src}/sourcetvmanager.zip" -d "${work}/sourcetvmanager"
+cp -a "${work}/sourcetvmanager/addons" "${repo_root}/plugins/source-common/sourcetvmanager/overlay/"
+
 unzip -q "${src}/vocalizeadmincommands.zip" -d "${work}/vocalizeadmincommands"
 unzip -q "${src}/sceneprocessor.zip" -d "${work}/sceneprocessor"
 unzip -q "${src}/builtinvotes-sm1.12-linux-93e0b8c.zip" -d "${work}/builtinvotes"
@@ -68,7 +73,7 @@ bsdtar -xf "${src}/l4d2_levelchanging.zip" -C "${work}/l4d2_levelchanging"
 cp -a "${work}/vocalizeadmincommands/addons" "${repo_root}/plugins/l4d-play/vocalize-admin-commands/overlay/"
 cp -a "${work}/sceneprocessor/addons" "${repo_root}/plugins/l4d-play/sceneprocessor/overlay/"
 cp -a "${work}/builtinvotes/addons" "${repo_root}/plugins/l4d-play/builtinvotes/overlay/"
-cp -a "${work}/l4d2_levelchanging/addons" "${repo_root}/plugins/l4d-play/l4d2-levelchanging/overlay/"
+cp -a "${work}/l4d2_levelchanging/addons" "${repo_root}/plugins/l4d2/l4d2-levelchanging/overlay/"
 
 unzip -q "${src}/Respawn.zip" -d "${work}/respawn"
 mkdir -p "${repo_root}/plugins/l4d-play/respawn/overlay/addons/sourcemod"
@@ -90,4 +95,3 @@ cp -a "${work}/sp_public/addons/sourcemod/scripting/placeholders.sp" "${repo_roo
 cp -a "${work}/sp_public/addons/sourcemod/scripting/include" "${repo_root}/plugins/l4d-play/sp-public-selected/overlay/addons/sourcemod/scripting/"
 
 echo "Imported local downloads from ${src}"
-

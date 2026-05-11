@@ -5,4 +5,4 @@ plugins/source-common/command-buffer
 plugins/source-common/sm-dev-cmds
 plugins/source-common/console-welcome
 plugins/source-common/autoreload
-
+plugins/source-common/sourcetvmanager

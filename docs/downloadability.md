@@ -1,6 +1,6 @@
 # Downloadability Check
 
-Checked on 2026-05-10.
+Checked on 2026-05-10. SourceTV Manager was added and checked on 2026-05-11.
 
 ## Easy To Fetch In Actions
 
@@ -31,6 +31,7 @@ These are AlliedMods forum zip/attachment downloads or otherwise awkward to fetc
 | Tickrate | `tickrate.smx` | AlliedMods/forum download. No verified clean CI URL yet. |
 | Console Welcome | `console-welcome.smx` | AlliedMods/forum download. No verified clean CI URL yet. |
 | AutoReload | `AutoReload.zip` | Forum zip attachment; forum fetch returned 403 from plain `curl`. |
+| SourceTV Manager | `sourcetvmanager.zip` | Manual/local zip. Upstream has nightly build links, but GitHub Actions artifacts can expire. |
 | Vocalize Admin Commands | `vocalizeadmincommands.zip` | Forum zip attachment; forum fetch returned 403 from plain `curl`. |
 | Scene Processor | `sceneprocessor.zip` | Forum zip attachment; forum fetch returned 403 from plain `curl`. |
 | L4D2 Level Changing | `l4d2_levelchanging.zip` | Forum zip attachment; also uses ZIP compression unsupported by older `unzip`; `bsdtar` works. |

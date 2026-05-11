@@ -99,6 +99,16 @@ source_common:
     sha256: 341493cd860f3df4ad8748cc392b5105b0506f9ecde0ebf7f1e93903e5a4a292
     notes: Forum zip attachment; plain curl to AlliedMods returned 403.
 
+  - id: sourcetvmanager
+    name: SourceTV Manager
+    source: https://github.com/peace-maker/sourcetvmanager
+    forum: https://forums.alliedmods.net/showthread.php?t=280402
+    status: vendored-manual
+    planned_pack: source-common
+    artifact: sourcetvmanager.zip
+    sha256: 7bddfcb9a59e0a753fe8639954c21940ce291d44ee652ac4861855bcbe220f06
+    notes: Local zip includes Linux extension binaries for supported Source games plus gamedata and the SourcePawn include.
+
   - id: sourcebans-pp
     name: SourceBans++
     source: https://github.com/sbpp/sourcebans-pp/
@@ -147,15 +157,6 @@ l4d_play:
     artifact_name: builtinvotes-sm1.12-linux-93e0b8c
     artifact_api_url: https://api.github.com/repos/L4D-Community/builtinvotes/actions/artifacts/6214148569/zip
     notes: Requires GITHUB_TOKEN. Upstream GitHub Actions artifacts can expire.
-
-  - id: l4d2-levelchanging
-    name: L4D2 Level Changing
-    source: https://forums.alliedmods.net/showthread.php?t=319156
-    status: vendored-manual
-    planned_pack: l4d-play
-    artifact: l4d2_levelchanging.zip
-    sha256: 25809112dc5e9823bb727aae6ec36b33a31cd6d0f7d274131d3e4260c6061816
-    notes: Forum zip attachment; plain curl to AlliedMods returned 403. Extract with bsdtar, not old unzip.
 
   - id: respawn
     name: Respawn
@@ -206,6 +207,16 @@ l4d_play:
     planned_pack: l4d-play
     artifact: ragdoll_options.smx
     sha256: b466ce53d4ba9917578a23c729143c2b6833c7ae2ec8e6578205b5c8dcaebfd3
+
+l4d2:
+  - id: l4d2-levelchanging
+    name: L4D2 Level Changing
+    source: https://forums.alliedmods.net/showthread.php?t=319156
+    status: vendored-manual
+    planned_pack: l4d2
+    artifact: l4d2_levelchanging.zip
+    sha256: 25809112dc5e9823bb727aae6ec36b33a31cd6d0f7d274131d3e4260c6061816
+    notes: Forum zip attachment; plain curl to AlliedMods returned 403. Extract with bsdtar, not old unzip.
 
 l4d_common:
   - id: sourcetvsupport

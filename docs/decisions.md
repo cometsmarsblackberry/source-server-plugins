@@ -38,6 +38,11 @@ not removed from `l4d-server`.
 - `images/l4d-plugins/tickrate-enabler` -> `plugins/l4d-common/tickrate-enabler`
 - `images/l4d-play/plugins/ragdoll_options.smx` -> `plugins/l4d-play/ragdoll-options`
 
+## L4D2-Only Plugins
+
+Keep plugins that do not support L4D1 in the `l4d2` pack so L4D1 images can
+consume `l4d-common` and `l4d-play` without carrying incompatible files.
+
 ## SourceBans++
 
 SourceBans++ is broadly SourceMod-compatible, but it is a service integration

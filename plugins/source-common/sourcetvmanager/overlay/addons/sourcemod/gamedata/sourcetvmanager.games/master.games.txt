@@ -1,0 +1,21 @@
+"Game Master"
+{
+	"common.games.txt"
+	{
+	}
+	// Team Fortress 2
+	"game.tf.txt"
+	{
+		"game"		"tf"
+	}
+    // Left 4 Dead 2
+    "game.left4dead2.txt"
+    {
+        "game"      "left4dead2"
+    }
+    // Left 4 Dead
+    "game.left4dead.txt"
+    {
+        "game"      "left4dead"
+    }
+}

@@ -1,0 +1,2 @@
+# L4D2-specific runtime additions that should not be installed on L4D1 servers.
+plugins/l4d2/l4d2-levelchanging
