@@ -2,6 +2,12 @@
 plugins/l4d-play/vocalize-admin-commands
 plugins/l4d-play/sceneprocessor
 plugins/l4d-play/builtinvotes
+plugins/l4d-play/multicolors
+plugins/l4d-play/l4d2pause
+plugins/l4d-play/l4d2-vote-manager3
 plugins/l4d-play/respawn
+plugins/l4d-play/savechat
+plugins/l4d-play/admin-hp
+plugins/l4d-play/l4d-console-spam
 plugins/l4d-play/sp-public-selected
 plugins/l4d-play/ragdoll-options

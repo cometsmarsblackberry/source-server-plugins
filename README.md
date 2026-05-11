@@ -28,11 +28,22 @@ packs/<name>.list
 catalog/plugins.yml
   Human-readable source, checksum, and status notes.
 
+catalog/sourcepawn-builds.tsv
+  SourcePawn files compiled into runtime .smx artifacts during pack builds.
+
+scripts/setup-sourcemod.sh
+  Downloads the pinned SourceMod compiler used for SourcePawn builds.
+
 scripts/build-pack.sh
-  Builds a merged overlay under dist/<pack>/overlay.
+  Builds a merged overlay under dist/<pack>/overlay and compiles SourcePawn
+  plugins listed in catalog/sourcepawn-builds.tsv.
 ```
 
 ## Build A Pack
+
+SourcePawn plugins are compiled during `scripts/build-pack.sh` with SourceMod
+`1.12.0.7230`. The compiler is downloaded into `.tools/` unless `SOURCEMOD_HOME`
+points at an existing SourceMod install.
 
 ```sh
 scripts/validate.sh
@@ -70,7 +81,7 @@ COPY --from=plugin-packs /dist/source-common/overlay/ /path/to/game/
 
 ## Policy
 
-- Prefer fetching durable GitHub release assets in Actions.
-- Compile source-only plugins in Actions once their include dependencies are known.
-- Vendor manual AlliedMods downloads or expiring artifacts with a checksum.
+- Prefer source plus a pinned compiler for SourcePawn plugins.
+- Fetch durable GitHub release assets in Actions for non-SourcePawn binaries.
+- Vendor manual AlliedMods downloads, expiring artifacts, or binary-only plugins with a checksum.
 - Keep optional policy choices, especially anti-cheat plugins, in separate packs.

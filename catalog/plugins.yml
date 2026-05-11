@@ -1,106 +1,154 @@
 # Human-maintained catalog. The pack lists decide what actually gets built.
+# For `source-built` entries, the .smx artifact is generated into dist/ by
+# scripts/build-pack.sh using catalog/sourcepawn-builds.tsv.
 
 source_common:
   - id: sm-reloadmap
     name: SM-Re.LoadMap
     source: https://github.com/JoinedSenses/SM-Re.LoadMap
-    status: pending-github
+    status: source-built
     planned_pack: source-common
+    artifact: reloadmap.smx
+    source_artifact: reloadmap.sp
+    source_sha256: b536b537383a1c01080c784dbc9413cf789938bb3e48b7c704dcd2c1f9b3ccda
+    source_ref: 4ec12323ed78e19dbc402232d5c934b6f6f57462
+    compiler: SourceMod 1.12.0.7230
 
   - id: tickrate
     name: Tickrate
     source: https://forums.alliedmods.net/showthread.php?t=73925
-    status: vendored-manual
+    status: source-built
     planned_pack: source-common
     artifact: tickrate.smx
-    sha256: accd52453ce8424b519fa4e909f0b239c70c0186dde68023a1f0e1ca796f46f1
+    source_artifact: tickrate.sp
+    source_sha256: 3dd5e1bf035f182ac9246d3ab5c07305561733455a4192cf0f7a1530b43da83b
+    compiler: SourceMod 1.12.0.7230
+    notes: Source was manually downloaded into ~/Downloads and imported.
 
   - id: spray-exploit-fixer
     name: Spray Exploit Fixer
     source: https://github.com/SilvDev/Spray_Exploit
-    status: vendored-manual-now-compile-in-actions-later
+    status: source-built
     planned_pack: source-common
     artifact: spray_exploit_fixer.smx
-    sha256: 1d1a6b0e36bfef7984a33dbfddaaf23c207511c1863cf4d3550271dcf2ad51da
-    action_plan: Fetch raw source from GitHub and compile in Actions.
+    source_artifact: spray_exploit_fixer.sp
+    source_sha256: 5486425b818bb512967fe30ea8b01e419cb2e0575923dc7c40c7646fa0658357
+    source_ref: 56601c6a838c008c5ee2cd6540d3c2f24bd58682
+    compiler: SourceMod 1.12.0.7230
 
   - id: command-buffer
     name: Command Buffer
     source: https://github.com/SilvDev/Command_Buffer
-    status: vendored-manual-now-compile-in-actions-later
+    status: source-built
     planned_pack: source-common
     artifacts:
       - path: command_buffer.smx
-        sha256: 3be1eaea5950b7e7d967787976e55e7b7729278aa4bed3ddc5cc7c9df7a39f1c
       - path: command_buffer.games.txt
         sha256: adeb663f7e7700a34a9137973b1c062958c0c4bffdb53ca43bf9b6218593efb8
-    action_plan: Fetch raw source and gamedata from GitHub, then compile in Actions.
+    source_artifact: command_buffer.sp
+    source_sha256: fe08fefe3a44acc0494338c20ec6299833e8e6f1c9461552c97fa1b1ce267723
+    source_ref: 19e513731f38adaeb79ca41efda2feb6114a2fbb
+    compiler: SourceMod 1.12.0.7230
 
   - id: sm-dev-cmds
     name: Dev Cmds
     source: https://github.com/SilvDev/Various_Scripts_Collection/blob/main/sm_dev_cmds.sp
     forum: https://forums.alliedmods.net/showthread.php?t=187566
-    status: vendored-binary-now-compile-from-github-later
+    status: source-built
     planned_pack: source-common
     artifact: sm_dev_cmds.smx
-    sha256: 3e0f8b15f66a08423d2d542ef6b462e70044dbd653b06d35b1fd176317c6a4d2
     source_artifact: sm_dev_cmds.sp
     source_sha256: ce903d4e72f09a79bcc301e4decaf4b325f00019870e69a98913f0b7bdfb1dc5
     source_ref: fd405f873dc9b839f1f3125ee8142328294bb192
     source_version: "1.54"
     fallback_binary_url: https://www.sourcemod.net/vbcompiler.php?file_id=180343
-    notes: GitHub source is newer than the currently vendored binary. Compile from GitHub source in Actions before replacing the runtime .smx.
+    compiler: SourceMod 1.12.0.7230
+    notes: GitHub source is newer than the old vendored binary. Runtime .smx is now built from source.
 
   - id: noautokick
     name: No Auto Kick
     source: https://github.com/sapphonie/gameservers/blob/stable/tf/addons/sourcemod/scripting/noautokick.sp
-    status: pending-source-compile
+    status: source-built
     planned_pack: source-common
+    artifact: noautokick.smx
+    source_artifact: noautokick.sp
+    source_sha256: 59d0affdc1c745153159dc7862ab0256f0bb625098d10b04ee06cc6ac48c84f1
+    source_ref: 3407bb856fc3a34e7e28e7afebb82c7683378e7c
+    compiler: SourceMod 1.12.0.7230
 
   - id: lilac
     name: LILAC
     source: https://github.com/srcdslab/sm-plugin-lilac
-    status: vendored-github-release
+    status: source-built
     planned_pack: source-anticheat-lilac
-    artifact: sm-plugin-lilac-latest.tar.gz
-    download_url: https://github.com/srcdslab/sm-plugin-lilac/releases/download/latest/sm-plugin-lilac-latest.tar.gz
-    sha256: b33503bb668f4104533932951c596474ca2b747d794e5896b10f3870d58eee7c
+    artifact: lilac.smx
+    source_artifact: lilac.sp
+    source_sha256: 1aa95744895997f386765692e95cc53dfa17075b00433a6fc926641ae1a9d074
+    source_ref: 4d6a8ba83d5af07abafc707ee714161c04474951
+    compiler: SourceMod 1.12.0.7230
     notes: Optional pack because TF2 will use a different anti-cheat.
 
   - id: funcommandsx
     name: Fun Commands X
     source: https://github.com/JoinedSenses/SM-FunCommandsX
-    status: pending-github
+    status: source-built
     planned_pack: source-common
+    artifact: funcommandsX.smx
+    source_artifact: funcommandsX.sp
+    source_sha256: 51a5afb39bb68e2edd119b921f8dca704d751c140424ef35115543e6bf20dba7
+    source_ref: ec45781ab20152f1bac0debaa92eb1f54998962b
+    compiler: SourceMod 1.12.0.7230
+    notes: Upstream source folder is named `scipting`; vendored under the normal SourceMod `scripting` path with configs and translations.
 
   - id: firebulletsfix
     name: Fire Bullets Fix
     source: https://github.com/XutaxKamay/firebulletsfix
-    status: pending-github
+    status: source-built
     planned_pack: source-common
+    artifacts:
+      - path: firebulletsfix.smx
+      - path: firebulletsfix.games.txt
+        sha256: e475c1e7c5f0bffdb00b114033fbe9fa35109a21dc44edada756b66723224c53
+    source_artifact: firebulletsfix.sp
+    source_sha256: 047c78ff48ee432737a6493b454bd34452a2f1585df9b0ea9ce2e8f4ab3317bf
+    source_ref: 19f9f058c97a0175d80028883a0aa7eca805012c
+    compiler: SourceMod 1.12.0.7230
 
   - id: console-welcome
     name: Console Welcome
     source: https://forums.alliedmods.net/showpost.php?p=2797030&postcount=47
-    status: vendored-manual
+    status: source-built
     planned_pack: source-common
     artifact: console-welcome.smx
-    sha256: 737cf15f2fe656fe96736294a8ca1f5a9232c6d1ec6e39c57a26247c77434e6e
+    source_artifact: console-welcome.sp
+    source_sha256: f77379be0f2dff16587b55f5bf2e911924923c9d2c6b1f2c42577132aefb4771
+    compiler: SourceMod 1.12.0.7230
+    notes: Source was manually downloaded into ~/Downloads and imported.
 
   - id: chatexec
     name: ChatExec
     source: https://github.com/SNWCreations/ChatExec
-    status: pending-github
+    status: source-built
     planned_pack: source-common
+    artifacts:
+      - path: chat_exec.smx
+      - path: chat_exec.phrases.txt
+        sha256: ea41bcd8145f651d76c4606e05552fca43eadf7bb37981b7f903a0c2d1ad9101
+    source_artifact: chat_exec.sp
+    source_sha256: dbcb3da2d0ae482de9671f5ca374486ee0e18ea75a97a584111abff209655459
+    source_ref: 61e45b9d3b4207ab92b40c8b8266bb0404a3c196
+    compiler: SourceMod 1.12.0.7230
 
   - id: autoreload
     name: AutoReload
     source: https://forums.alliedmods.net/showthread.php?t=322045
-    status: vendored-manual
+    status: source-built
     planned_pack: source-common
-    artifact: AutoReload.zip
-    sha256: 341493cd860f3df4ad8748cc392b5105b0506f9ecde0ebf7f1e93903e5a4a292
-    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+    artifact: autoreload.smx
+    source_artifact: autoreload.sp
+    source_sha256: 9936ef4fc9b16b7fd8fc944216334227acb1c02ea3e7324a06b363254a30108c
+    compiler: SourceMod 1.12.0.7230
+    notes: Source came from a manually imported forum zip attachment; plain curl to AlliedMods returned 403.
 
   - id: sourcetvmanager
     name: SourceTV Manager
@@ -115,43 +163,80 @@ source_common:
   - id: sourcebans-pp
     name: SourceBans++
     source: https://github.com/sbpp/sourcebans-pp/
-    status: vendored-github-release
+    status: source-built
     planned_pack: source-admin-sourcebans
-    artifact: sourcebans-pp-Plugins-Latest.tar.gz
-    download_url: https://github.com/sbpp/sourcebans-pp/releases/download/Plugins-Latest/sourcebans-pp-Plugins-Latest.tar.gz
-    sha256: 18fbd458af0b610f93553a8eaec1c89d1cc6bca8b2a94cbd4ecc73f4c88aabce
+    artifacts:
+      - path: sbpp_admcfg.smx
+      - path: sbpp_checker.smx
+      - path: sbpp_comms.smx
+      - path: sbpp_main.smx
+      - path: sbpp_report.smx
+      - path: sbpp_sleuth.smx
+    source_ref: 48f011c1e3395d024cc6a23d9cbf4fb69672424f
+    compiler: SourceMod 1.12.0.7230
     notes: Keep optional because it needs database/web configuration.
 
 l4d_play:
   - id: vocalize-admin-commands
     name: Vocalize Admin Commands
     source: https://forums.alliedmods.net/showthread.php?p=2147419
-    status: vendored-manual
+    status: source-built
     planned_pack: l4d-play
-    artifact: vocalizeadmincommands.zip
-    sha256: 3e1fd54eee3d366e761572272664eecf2e987022073b5e5053b7171911579c82
-    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+    artifact: vocalizeadmincommands.smx
+    source_artifact: vocalizeadmincommands.sp
+    source_sha256: 8b8efa147c17590d203fe8b3ed28e68dd9b8684604d30bca2b046b36e5964cbe
+    compiler: SourceMod 1.12.0.7230
+    notes: Source came from a manually imported forum zip attachment; plain curl to AlliedMods returned 403.
 
   - id: sceneprocessor
     name: Scene Processor
     source: https://forums.alliedmods.net/showpost.php?p=2766130&postcount=59
-    status: vendored-manual
+    status: source-built
     planned_pack: l4d-play
-    artifact: sceneprocessor.zip
-    sha256: b2e93d1849095969b4eeb927e9a78ce81b7fb0f41c6bada3b154547b59364c6b
-    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+    artifact: sceneprocessor.smx
+    source_artifact: sceneprocessor.sp
+    source_sha256: 823aea4974c4992e7e4cd2e33ab607a009403cdbcdc71a966bc51393ab0073e8
+    compiler: SourceMod 1.12.0.7230
+    notes: Source came from a manually imported forum zip attachment; plain curl to AlliedMods returned 403.
+
+  - id: multicolors
+    name: Multi Colors Include
+    source: https://github.com/fbef0102/L4D1_2-Plugins/releases/tag/Multi-Colors
+    status: vendored-source-include
+    planned_pack: l4d-play
+    artifact: multicolors.zip
+    sha256: d8bbd897ee87450e3e0e9d1fab317ab5278af8ae968178b94b6c13d32825ae60
+    notes: Compile-time include dependency for several fbef0102 plugins.
 
   - id: l4d2pause
     name: l4d2pause
     source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d2pause
-    status: pending-github
+    status: source-built
     planned_pack: l4d-play
+    artifacts:
+      - path: l4d2pause.smx
+      - path: l4d2pause.phrases.txt
+        sha256: a4204281936c14d3744b0ce820bc7a75402fdcbfab6994f17a58d2b197a5caa4
+    source_artifact: l4d2pause.sp
+    source_sha256: f4a2ddf174406a6d51df83b3643790c352aa69a1d8d07f26c7b0de213d9aa0cd
+    source_ref: 4bd13cd73316171007ccad3afa1a6ec4caaa552d
+    compiler: SourceMod 1.12.0.7230
+    notes: Uses the vendored Multi Colors include to rebuild.
 
   - id: l4d2-vote-manager3
     name: l4d2_vote_manager3
     source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d2_vote_manager3
-    status: pending-github
+    status: source-built
     planned_pack: l4d-play
+    artifacts:
+      - path: l4d2_vote_manager3.smx
+      - path: l4d2_vote_manager3.phrases.txt
+        sha256: 9b2e5fd82c1ee53912e43a0e3f3719a4ca491ebbfb56e7cd59cbbf283d33f5f0
+    source_artifact: l4d2_vote_manager3.sp
+    source_sha256: 519d8cadfe37f8334172bdb3ee865b5730301ba900be489eb11128a922f5dbea
+    source_ref: 4bd13cd73316171007ccad3afa1a6ec4caaa552d
+    compiler: SourceMod 1.12.0.7230
+    notes: Requires BuiltinVotes at runtime and the vendored Multi Colors/BuiltinVotes includes to rebuild.
 
   - id: builtinvotes
     name: BuiltinVotes
@@ -167,62 +252,90 @@ l4d_play:
   - id: respawn
     name: Respawn
     source: https://forums.alliedmods.net/showthread.php?p=2693455
-    status: vendored-manual
+    status: source-built
     planned_pack: l4d-play
-    artifact: Respawn.zip
-    sha256: 494d3a1c2e48e41db8a723070c3298766c8a044d1364fd5761b22987ba6d2aa2
-    notes: Forum zip attachment; plain curl to AlliedMods returned 403.
+    artifact: l4d_sm_respawn.smx
+    source_artifact: l4d_sm_respawn.sp
+    source_sha256: b7a3eba3583abe1a6fb97c2b1100b456a7d8f55bdbc24784c8f26840d9a12a51
+    compiler: SourceMod 1.12.0.7230
+    notes: Source came from a manually imported forum zip attachment; plain curl to AlliedMods returned 403.
 
   - id: savechat
     name: savechat
     source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/savechat
-    status: pending-github
+    status: source-built
     planned_pack: l4d-play
+    artifact: savechat.smx
+    source_artifact: savechat.sp
+    source_sha256: 47af7795bb2ad6ca400b88899addf5e21afb6f2cf908312d7b7f37665b7dfc5b
+    source_ref: 4bd13cd73316171007ccad3afa1a6ec4caaa552d
+    compiler: SourceMod 1.12.0.7230
 
   - id: admin-hp
     name: admin_hp
     source: https://github.com/fbef0102/L4D1_2-Plugins/tree/master/admin_hp
-    status: pending-github
+    status: source-built
     planned_pack: l4d-play
+    artifacts:
+      - path: admin_hp.smx
+      - path: admin_hp.phrases.txt
+        sha256: bc2a8997910db99c3c809c07e95d22397e6cb54c812fa5c7bb6383dd33e2991f
+    source_artifact: admin_hp.sp
+    source_sha256: fa0e9b38fbf562ad303cc53620d3e9ee6d461a56cf400790d3c79234c97a810d
+    source_ref: 4bd13cd73316171007ccad3afa1a6ec4caaa552d
+    compiler: SourceMod 1.12.0.7230
+    notes: Uses the vendored Multi Colors include to rebuild.
 
   - id: l4d-console-spam
     name: l4d_console_spam
     source: https://github.com/SirPlease/L4D2-Competitive-Rework
-    status: pending-github
+    status: source-built
     planned_pack: l4d-play
+    artifacts:
+      - path: fixes/l4d_console_spam.smx
+      - path: l4d_console_spam.txt
+        sha256: 86e7eb8d243998b74d0fb7ddfd6d4c6e116431762fd05daab3806d3bafac3e2d
+    source_artifact: l4d_console_spam.sp
+    source_sha256: 6810115e4f5d8bb908dad66f642e5ef1b0ef2806f5944bbc922bc75c3ea07034
+    source_ref: e7f72380991eefe58abc132d9fd18ce2e5595dea
+    compiler: SourceMod 1.12.0.7230
 
   - id: sp-public-selected
     name: sp_public selected plugins
     source: https://github.com/shqke/sp_public/
-    status: fetchable-github-actions-artifact
+    status: source-built
     planned_pack: l4d-play
-    artifact: sp_public-sm1.12-0b7f52e.zip
-    sha256: 99774cbb60947a2001aec34dcf419105f57379d9ca1dab17122de350a298e63e
-    artifact_name: sp_public-sm1.12-0b7f52e
-    artifact_api_url: https://api.github.com/repos/shqke/sp_public/actions/artifacts/6214170056/zip
-    notes: Requires GITHUB_TOKEN. Upstream GitHub Actions artifacts can expire.
-    included_plugins:
-      - autorecorder
-      - hide_sourcetv
-      - placeholders
+    artifacts:
+      - path: autorecorder.smx
+      - path: hide_sourcetv.smx
+      - path: placeholders.smx
+    source_ref: 0b7f52e
+    compiler: SourceMod 1.12.0.7230
+    notes: Sources/includes were imported from the old GitHub Actions artifact and are now compiled during pack builds.
 
   - id: ragdoll-options
     name: ragdoll_options
-    source: https://github.com/neburaii/l4d2-plugins/blob/08f0772871f12f20136bfd063f6de37be17c3b73/ragdoll_options/plugins/ragdoll_options.smx
-    status: copied-from-l4d-server
+    source: https://github.com/neburaii/l4d2-plugins/tree/08f0772871f12f20136bfd063f6de37be17c3b73/ragdoll_options
+    status: source-built
     planned_pack: l4d-play
     artifact: ragdoll_options.smx
-    sha256: b466ce53d4ba9917578a23c729143c2b6833c7ae2ec8e6578205b5c8dcaebfd3
+    source_artifact: ragdoll_options.sp
+    source_sha256: e7d90ec7c0d05a7aa196f58fbaf75e62f311763da8acac4b39a90dd239a6b43e
+    source_ref: 08f0772871f12f20136bfd063f6de37be17c3b73
+    compiler: SourceMod 1.12.0.7230
+    notes: Uses neb_stocks.inc from the same pinned commit, SHA-256 56045de903872814c49f367b0aaa5456a9305018f431fe898b0be2b737f1e601.
 
 l4d2:
   - id: l4d2-levelchanging
     name: L4D2 Level Changing
     source: https://forums.alliedmods.net/showthread.php?t=319156
-    status: vendored-manual
+    status: source-built
     planned_pack: l4d2
-    artifact: l4d2_levelchanging.zip
-    sha256: 25809112dc5e9823bb727aae6ec36b33a31cd6d0f7d274131d3e4260c6061816
-    notes: Forum zip attachment; plain curl to AlliedMods returned 403. Extract with bsdtar, not old unzip.
+    artifact: l4d2_changelevel.smx
+    source_artifact: l4d2_changelevel.sp
+    source_sha256: 3060a2d0a67580ba0c564c521393a96a8029b13c7b2e1e2d5aa58f9f1d6c88bb
+    compiler: SourceMod 1.12.0.7230
+    notes: Source came from a manually imported forum zip attachment; plain curl to AlliedMods returned 403. Extract with bsdtar, not old unzip.
 
 l4d_common:
   - id: sourcetvsupport

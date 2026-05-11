@@ -55,5 +55,6 @@ while IFS= read -r line || [[ -n "${line}" ]]; do
   echo "- ${line}" >> "${inventory}"
 done < "${pack_file}"
 
-echo "Built ${pack} -> ${overlay_dir}"
+"${repo_root}/scripts/compile-sourcepawn.sh" "${pack_file}" "${overlay_dir}"
 
+echo "Built ${pack} -> ${overlay_dir}"

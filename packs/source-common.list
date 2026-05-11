@@ -1,8 +1,13 @@
 # Generic plugins that should be safe for most SourceMod servers.
+plugins/source-common/sm-reloadmap
 plugins/source-common/tickrate
 plugins/source-common/spray-exploit-fixer
 plugins/source-common/command-buffer
 plugins/source-common/sm-dev-cmds
+plugins/source-common/noautokick
+plugins/source-common/funcommandsx
+plugins/source-common/firebulletsfix
 plugins/source-common/console-welcome
+plugins/source-common/chatexec
 plugins/source-common/autoreload
 plugins/source-common/sourcetvmanager

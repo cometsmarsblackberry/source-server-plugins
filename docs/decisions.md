@@ -22,6 +22,13 @@ Durable GitHub release assets should be downloaded in Actions. Source-only
 plugins should be compiled in Actions with a pinned SourceMod compiler once
 their include dependencies are listed.
 
+## SourcePawn Builds
+
+SourcePawn plugins should prefer vendored source plus the pinned SourceMod
+compiler over committed `.smx` binaries. `scripts/build-pack.sh` compiles the
+entries in `catalog/sourcepawn-builds.tsv` into `dist/`; generated `.smx`
+artifacts are not committed for those entries.
+
 ## LILAC And TF2
 
 Do not put LILAC directly in `source-common` if TF2 will use a different

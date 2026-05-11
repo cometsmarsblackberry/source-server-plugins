@@ -1,8 +1,18 @@
 # syntax=docker/dockerfile:1.7
 
-FROM alpine:3.20 AS build
+FROM debian:bookworm-slim AS build
 
-RUN apk add --no-cache bash coreutils findutils grep
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+      bash \
+      ca-certificates \
+      coreutils \
+      curl \
+      findutils \
+      grep \
+      lib32stdc++6 \
+      tar \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /src
 COPY . .

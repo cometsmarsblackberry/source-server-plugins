@@ -24,6 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Install SourcePawn compiler runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends lib32stdc++6
+
       - name: Validate pack metadata
         run: scripts/validate.sh
 
