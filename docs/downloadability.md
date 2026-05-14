@@ -30,6 +30,7 @@ into `dist/`. Generated `.smx` files are not committed for these plugins.
 | savechat | GitHub source | Commit `4bd13cd73316171007ccad3afa1a6ec4caaa552d`. |
 | admin_hp | GitHub source | Uses vendored Multi Colors include. |
 | l4d_console_spam | GitHub source + gamedata | SirPlease/L4D2-Competitive-Rework commit `e7f72380991eefe58abc132d9fd18ce2e5595dea`. |
+| Tickrate Fixes | GitHub source + include | SirPlease/L4D2-Competitive-Rework commit `87a8c70b57c8a3d67e01d10b457bf24cb1bfafc2`; built into `addons/sourcemod/plugins/disabled`. |
 | sp_public selected plugins | Vendored source/includes from old Actions artifact | `autorecorder`, `hide_sourcetv`, and `placeholders` now compile during the pack build. |
 | ragdoll_options | GitHub source + include | Source and `neb_stocks.inc` are from commit `08f0772871f12f20136bfd063f6de37be17c3b73`. |
 | L4D2 Level Changing | Vendored source from forum zip | Source, include, and gamedata are vendored. |

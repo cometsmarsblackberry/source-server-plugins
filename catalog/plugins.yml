@@ -300,6 +300,18 @@ l4d_play:
     source_ref: e7f72380991eefe58abc132d9fd18ce2e5595dea
     compiler: SourceMod 1.12.0.7230
 
+  - id: tickrate-fixes
+    name: Tickrate Fixes
+    source: https://github.com/SirPlease/L4D2-Competitive-Rework
+    status: source-built
+    planned_pack: l4d-play
+    artifact: disabled/TickrateFixes.smx
+    source_artifact: TickrateFixes.sp
+    source_sha256: 1e57607453431e0e63dc8935b5aa2e1db6bbe94c239d60df571b1f0a61467e40
+    source_ref: 87a8c70b57c8a3d67e01d10b457bf24cb1bfafc2
+    compiler: SourceMod 1.12.0.7230
+    notes: Builds into SourceMod's disabled plugin folder. Uses upstream l4d2util_constants.inc from the same commit, SHA-256 16b517926770180c67f19466111b468d31dcbd90242ee0476f1a53b15a69a9e7.
+
   - id: sp-public-selected
     name: sp_public selected plugins
     source: https://github.com/shqke/sp_public/

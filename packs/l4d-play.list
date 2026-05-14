@@ -9,5 +9,6 @@ plugins/l4d-play/respawn
 plugins/l4d-play/savechat
 plugins/l4d-play/admin-hp
 plugins/l4d-play/l4d-console-spam
+plugins/l4d-play/tickrate-fixes
 plugins/l4d-play/sp-public-selected
 plugins/l4d-play/ragdoll-options

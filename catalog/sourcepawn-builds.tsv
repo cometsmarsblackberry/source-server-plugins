@@ -18,6 +18,7 @@ plugins/l4d-play/l4d2-vote-manager3	l4d2_vote_manager3.sp	l4d2_vote_manager3.smx
 plugins/l4d-play/savechat	savechat.sp	savechat.smx
 plugins/l4d-play/admin-hp	admin_hp.sp	admin_hp.smx
 plugins/l4d-play/l4d-console-spam	l4d_console_spam.sp	fixes/l4d_console_spam.smx
+plugins/l4d-play/tickrate-fixes	TickrateFixes.sp	disabled/TickrateFixes.smx
 plugins/l4d-play/sp-public-selected	autorecorder.sp	autorecorder.smx
 plugins/l4d-play/sp-public-selected	hide_sourcetv.sp	hide_sourcetv.smx
 plugins/l4d-play/sp-public-selected	placeholders.sp	placeholders.smx
